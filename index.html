@@ -29,6 +29,7 @@
             background: white;
             box-shadow: 0 4px 8px rgba(0,0,0,0.1);
             border-radius: 10px;
+            position: relative; /* This makes absolute positioning inside work */
         }
         footer {
             text-align: center;
@@ -77,6 +78,8 @@
             position: absolute;
             top: 50px;  /* Distance from the top */
             left: 100px; /* Distance from the left */
+            max-width: 250px; /* Image width will not exceed 300px */
+            height: auto; /* Maintains aspect ratio */
         }
     </style>
 </head>
@@ -93,7 +96,7 @@
         
         <a href="https://tropoz.org/" target="_blank" class="btn-publications">TropOz Website</a>
 
-        <img src="photo.jpg" alt="Personal photo" class="image" width="300" height="200">
+        <img src="photo.jpg" alt="Personal photo" class="image">
 
         <h2>Research interests</h2>
         <ul>
